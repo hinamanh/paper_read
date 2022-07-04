@@ -1,0 +1,28 @@
+{
+    "id": "82B8BD0B",
+    "path": "~/Report(in RMD)/rmd_file/sample-size-calculation.Rmd",
+    "project_path": "rmd_file/sample-size-calculation.Rmd",
+    "type": "r_markdown",
+    "hash": "1634555053",
+    "contents": "",
+    "dirty": true,
+    "created": 1656910846757.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "working_dir": "current",
+        "cursorPosition": "11,12",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1656912014,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1656912114567,
+    "read_only": false,
+    "read_only_alternatives": []
+}

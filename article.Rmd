@@ -1,0 +1,48 @@
+---
+title: "ALICE Trial Design"
+author: "Nam-Anh Tran"
+date: "`r Sys.Date()`"
+output:
+  bookdown::pdf_book:
+    toc: no
+header-includes:
+  - \usepackage{fancyhdr}
+  - \pagestyle{fancy}
+fig_caption: yes
+subparagraph: yes
+link-citations: yes
+linkcolor: magenta
+urlcolor: teal
+fontsize: 12pt
+indent: yes
+bibliography: citation.bib
+csl: citation.csl
+linestretch: 1.5
+editor_options: 
+  chunk_output_type: console
+---
+
+\setlength\headheight{15pt}
+\newcommand{\V}[1]{\boldsymbol{#1}}
+
+
+
+
+
+```{r, warning=FALSE, error=FALSE, message=FALSE}
+if(!require(pacman)) install.packages("pacman")
+pacman::p_load(tidyverse, kableExtra)
+
+
+```
+
+
+
+
+
+
+<!-- ========================================================================== -->
+
+\newpage
+
+# References {.unnumbered}

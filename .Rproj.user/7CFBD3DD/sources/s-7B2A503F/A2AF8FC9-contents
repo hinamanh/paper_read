@@ -1,0 +1,27 @@
+---
+title: "Sample Size Calculation"
+description: |
+author: |
+date: "`r Sys.Date()`"
+output: distill::distill_article
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding, output_dir = "../docs")})
+bibliography: '../citation.bib'
+csl: '../citation.csl'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+**Bayesian sample size determination for diagnostic accuracy studies**.[@wilson2022]
+
+This study discussed sample size calculation using hybrid the Bayesian method. The application used is beta-binomial model, but the inputs are contingency table rather than direct proportions. some major features are 
+
+1. 
+
+
+
+
+
+
