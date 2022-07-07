@@ -16,9 +16,10 @@ knitr::opts_chunk$set(echo = FALSE)
 
 **Bayesian sample size determination for diagnostic accuracy studies**.[@wilson2022]
 
-This study discussed sample size calculation using hybrid the Bayesian method. The application used is beta-binomial model, but the inputs are contingency table rather than direct proportions. some major features are 
+This study discussed sample size calculation using hybrid the Bayesian method. The application used is beta-binomial model, but the input are contingency table rather than direct proportions. some major features are 
 
-1. 
+- We can use the idea in the study to calculate sample size 
+
 
 
 

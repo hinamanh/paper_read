@@ -1,0 +1,28 @@
+---
+title: "Enrichment Adaptive Trial Designs"
+description: |
+author: |
+date: "`r Sys.Date()`"
+output: distill::distill_article
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding, output_dir = "../docs")})
+bibliography: '../citation.bib'
+csl: '../citation.csl'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+colorize = function(x,col){
+  sprintf("<span style='color: %s;'>%s</span>", col,x)
+}
+```
+
+### `r colorize("Enrichment Bayesian design for randomized clinical trials using categorical biomarkers and a binary outcome.[@vinnat2022]", "deeppink")`
+
+**Objective**. This study proposed a Bayesian adaptive trial combined with the consideration of subgroup. The objective is to detecting the therapeutic intervention AND identify subset of subjects who respond better to the experimental therapy. 
+
+**Literature review**. The study introduced two preceding studies, where a subset selection criterion was used in the former based on the posterior measure of influence of the treatment;[@morita2014] The later used  the posterior treatment-by-subset interaction.[@millen2014] Author would combine both criteria and concluded the result was likely better. 
+
+**Methodology**. Technically, each subgroup categorized by the specific variable (target or biomarker) was assessed based on the measure of influence and the measure of interaction (involving qualitative & quantitative interaction).[@gail1985] specific-subgroup effect size was evaluated along with the overall effect size (no interacted). Decision rules were specified based on pre-defined thresholds.
+
+**Results**. Results were derived from simulations with multiple scenarios implying the number of subgroups. 
