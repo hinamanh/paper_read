@@ -3,26 +3,68 @@ title: "Enrichment Adaptive Trial Designs"
 date: "`r format(Sys.time(), '%B %d %Y')`"
 description: Review articles relating to engrichment adaptive trial design (ideally using Bayesian framework).
 author: Nam-Anh
-output: distill::distill_article
+output: 
+  distill::distill_article:
+    toc: true
 knit: (function(inputFile, encoding) {
   rmarkdown::render(inputFile, encoding = encoding, output_dir = "../docs")})
 bibliography: '../citation.bib'
 csl: '../citation.csl'
+params:
+  linkcol: "navy"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-colorize = function(x,col){
+colorize = function(x,col = params$linkcol){
   sprintf("<span style='color: %s;'>%s</span>", col,x)
 }
 ```
 
-#### `r colorize("Enrichment Bayesian design for randomized clinical trials using categorical biomarkers and a binary outcome.[@vinnat2022]", "deeppink")`
+## `r colorize("Operating characteristics")`
+
+### `r colorize("Millen et al. @millen2014")`
+
+This study proposed *influence* and *interaction* conditions used to evaluate treatment effect in biomarker-existed trial (biomarkers). The former reflects the effect size in one subgroup, say negative, and the latter describes if the effect size of complementary subgroup (positive) is significantly better than that in the negative one. For example, $\theta_{-}$ and $\theta_{+}$ is the effect size associated with the negative and positive subgroups, respectively. The **influence condition** states statistical significance if 
+
+$$
+\theta_{-} > \lambda_1,
+(\#eq:eq1)
+$$
+and the **interaction condition** states 
+
+$$
+\frac{\theta_{+}}{\theta_{-}} > \lambda_2.
+(\#eq:eq2)
+$$
+
+The interaction and influence condition are undertaken based on the Bayesian framework. Thus, Equation \@ref(eq:eq1) and \@ref(eq:eq2) are defined as follows:
+
+$$
+\mathbb{P}\big[\theta_{-} > \lambda_1|x\big] > \gamma_1, \quad 
+\mathbb{P}\big[\frac{\theta_{+}}{\theta_{-}}> \lambda_2|x, \theta_{-} > \lambda_1\big] > \gamma_2.
+$$
+
+The algorithm proceeds as follows:
+
+1. We undertake a test to assess the influence condition of negative subgroup. If it is not significant, we will stop this subgroup and consider the positive group only. 
+2. If it is significant, we will undertake the test for the interaction condition. 
+3. If the interaction condition is not significant, the appropriate inference is one of overall population. 
+4. If the interaction test is significant, the effect size associated with the negative subgroup can provide the information on treatment effectiveness in the overall population. We also can accrue patients to each arm, each subgroup. 
+
+
+
+
+
+
+## `r colorize("Enrichment trial designs")` 
+
+### `r colorize("Vinnat et al. [@vinnat2022].")` 
 
 **Objective**. This study proposed a Bayesian adaptive trial combined with the consideration of subgroup. The objective is to detecting the therapeutic intervention AND identify subset of subjects who respond better to the experimental therapy. 
 
-**Literature review**. The study introduced two preceding studies, where a subset selection criterion was used in the former based on the posterior measure of influence of the treatment;[@morita2014] The later used  the posterior treatment-by-subset interaction.[@millen2014] Author would combine both criteria and concluded the result was likely better. 
+**Literature review**. The study introduced two preceding studies, where a subset selection criterion was used in the former based on the posterior measure of influence of the treatment [@morita2014]; The later used  the posterior treatment-by-subset interaction [@millen2014]. Author would combine both criteria and concluded the result was likely better. 
 
-**Methodology**. Technically, each subgroup categorized by the specific variable (target or biomarker) was assessed based on the measure of influence and the measure of interaction (involving qualitative & quantitative interaction).[@gail1985] specific-subgroup effect size was evaluated along with the overall effect size (no interacted). Decision rules were specified based on pre-defined thresholds.
+**Methodology**. Technically, each subgroup categorized by the specific variable (target or biomarker) was assessed based on the measure of influence and the measure of interaction (involving qualitative & quantitative interaction) [@gail1985]. specific-subgroup effect size was evaluated along with the overall effect size (no interacted). Decision rules were specified based on pre-defined thresholds.
 
 **Results**. Results were derived from simulations with multiple scenarios implying the number of subgroups. 

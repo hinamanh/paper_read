@@ -3,7 +3,9 @@ title: "Sample Size Calculation"
 description: Review articles relating to Sample size calculation (ideally using Bayesian framework).
 author: Nam-Anh
 date: "`r format(Sys.time(), '%B %d %Y')`"
-output: distill::distill_article
+output: 
+  distill::distill_article:
+    toc: true
 knit: (function(inputFile, encoding) {
   rmarkdown::render(inputFile, encoding = encoding, output_dir = "../docs")})
 bibliography: '../citation.bib'
@@ -12,16 +14,37 @@ csl: '../citation.csl'
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-colorize = function(x,col="deeppink"){
+colorize = function(x,col="navy"){
   sprintf("<span style='color: %s;'>%s</span>", col,x)
 }
 ```
 
-#### `r colorize("Bayesian sample size determination for diagnostic accuracy studies.[@wilson2022]", col = "deeppink")`
+## `r colorize("How to choose the prior information?")`
 
-This study discussed sample size calculation using hybrid the Bayesian method. The application used is beta-binomial model, but the input are contingency table rather than direct proportions. some major features are 
+### `r colorize("falconer et al. [@falconer2022].")`
 
-- We can use the idea in the study to calculate sample size 
+This study discussed methods for exploiting prior information. 
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ## How to calculate sample size?  -->
+
+<!-- ### `r colorize("Bayesian sample size determination for diagnostic accuracy studies")` [@wilson2022]. -->
+
+<!-- This study discussed sample size calculation using hybrid the Bayesian method. The application used is beta-binomial model, but the input are contingency table rather than direct proportions. some major features are  -->
+
+<!-- - We can use the idea in the study to calculate sample size  -->
+
+
 
 
 
